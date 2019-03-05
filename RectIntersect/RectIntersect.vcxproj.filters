@@ -21,19 +21,19 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CRectangle.h">
+    <ClInclude Include="..\Rectangles\json.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CRectangleVec.h">
+    <ClInclude Include="..\Rectangles\CRectangleVec.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CRectangleMap.h">
+    <ClInclude Include="..\Rectangles\CRectanglesFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CRectanglesFactory.h">
+    <ClInclude Include="..\Rectangles\CRectangleMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="json.hpp">
+    <ClInclude Include="..\Rectangles\CRectangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -41,19 +41,16 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Rectangles.cpp">
+    <ClCompile Include="..\Rectangles\CRectangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CRectangle.cpp">
+    <ClCompile Include="..\Rectangles\CRectangleMap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CRectangleVec.cpp">
+    <ClCompile Include="..\Rectangles\CRectangleVec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CRectangleMap.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CRectanglesFactory.cpp">
+    <ClCompile Include="..\Rectangles\CRectanglesFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
