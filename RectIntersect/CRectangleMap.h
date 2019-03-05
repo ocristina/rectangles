@@ -19,8 +19,6 @@ public:
 private:
 	MAP_RECTANGLES m_mapStorage;
 
-
-	string getIntersectionOperands(const CHashKey&);
 	void filterOutEmptyRects();
 };
 

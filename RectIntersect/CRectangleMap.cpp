@@ -19,9 +19,9 @@ bool CRectangleMap::Exists(CHashKey& set_key)
 }
 
 
-void CRectangleMap::AddNewResultRectangle(CHashKey& rset_orig, CRectangle& rc_rect)
+void CRectangleMap::AddNewResultRectangle(CHashKey& rc_orig, CRectangle& rc_rect)
 {
-	m_mapStorage[rset_orig] = rc_rect;
+	m_mapStorage[rc_orig] = rc_rect;
 }
 
 int CRectangleMap::Count()
@@ -62,10 +62,7 @@ CRectangleMap CRectangleMap::GenerateIntersectionSet()
 	return cmapResult;
 }
 
-string CRectangleMap::getIntersectionOperands(const CHashKey& rc_key)
-{
-	return "Between Rectangle " + rc_key.getDesc();
-}
+
 
 void CRectangleMap::PrintContents()
 {
@@ -73,7 +70,7 @@ void CRectangleMap::PrintContents()
 	int nCount = 0;
 
 	for (it = m_mapStorage.begin(); it != m_mapStorage.end(); ++it)
-		cout << "\t" << ++nCount << " : " << "Between Rectangle " << getIntersectionOperands(it->first).c_str() << " " << (it->second).GetDescription().c_str() << endl;
+		cout << "\t" << ++nCount << " : " << "Between Rectangle " << it->first.getDesc().c_str() << " " << (it->second).GetDescription().c_str() << endl;
 }
 
 void CRectangleMap::filterOutEmptyRects()
