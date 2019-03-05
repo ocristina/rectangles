@@ -1,6 +1,6 @@
 #define BOOST_TEST_MODULE RectanglesTests
 #include <boost/test/included/unit_test.hpp>
-#include "..\Rectangles\CRectangle.h"
+#include "..\RectIntersect\CRectangle.h"
 
 BOOST_AUTO_TEST_CASE(TC_NON_INTERSECTING)
 {

@@ -147,19 +147,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\Rectangles\CRectangle.h" />
-    <ClInclude Include="..\Rectangles\CRectangleMap.h" />
-    <ClInclude Include="..\Rectangles\CRectanglesFactory.h" />
-    <ClInclude Include="..\Rectangles\CRectangleVec.h" />
-    <ClInclude Include="..\Rectangles\json.hpp" />
+    <ClInclude Include="CHashKey.h" />
+    <ClInclude Include="CRectangle.h" />
+    <ClInclude Include="CRectangleMap.h" />
+    <ClInclude Include="CRectanglesFactory.h" />
+    <ClInclude Include="CRectangleVec.h" />
+    <ClInclude Include="json.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Rectangles\CRectangle.cpp" />
-    <ClCompile Include="..\Rectangles\CRectangleMap.cpp" />
-    <ClCompile Include="..\Rectangles\CRectanglesFactory.cpp" />
-    <ClCompile Include="..\Rectangles\CRectangleVec.cpp" />
+    <ClCompile Include="CHashKey.cpp" />
+    <ClCompile Include="CRectangle.cpp" />
+    <ClCompile Include="CRectangleMap.cpp" />
+    <ClCompile Include="CRectanglesFactory.cpp" />
+    <ClCompile Include="CRectangleVec.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
