@@ -1,9 +1,9 @@
 #pragma once
 
-#include <map>
-#include <set>
+#include <unordered_map>
 #include <vector>
 
+#include "CHashKey.h"
 
 using namespace std;
 
@@ -44,34 +44,9 @@ private:
 };
 
 
-namespace std {
-
-	template <>
-	struct hash<set<int>>
-	{
-		std::size_t operator()(const set<int>& k) const
-		{
-			using std::size_t;
-			using std::hash;
-			using std::string;
-
-			// Compute individual hash values for first,
-			// second and third and combine them using XOR
-			// and bit shifting:
-			size_t returnVal = 0;
-
-			for (set<int>::iterator it = k.begin(); it != k.end(); it++)
-				returnVal ^= hash<int>()(*it);
-		/*	return ((hash<string>()(k.first)
-				^ (hash<string>()(k.second) << 1)) >> 1)
-				^ (hash<int>()(k.third) << 1);*/
-			return returnVal;
-		}
-	};
-
-}
 
 typedef vector<CRectangle> VEC_RECTANGLES;
 typedef vector<CRectangle>::iterator VEC_IT_RECTANGLES;
-typedef map<set<int>, CRectangle> MAP_RECTANGLES;
-typedef map<set<int>, CRectangle>::iterator MAP_IT_RECTANGLES;
+
+typedef unordered_map<CHashKey, CRectangle> MAP_RECTANGLES;
+typedef unordered_map<CHashKey, CRectangle>::iterator MAP_IT_RECTANGLES;

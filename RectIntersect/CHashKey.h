@@ -4,10 +4,13 @@ class CHashKey
 	friend std::hash<CHashKey>;
 public:
 	CHashKey(int n_first,int n_second);
+	CHashKey(const CHashKey&);
 
 	~CHashKey();
 
-	CHashKey merge(const CHashKey&);
+	CHashKey merge(const CHashKey&) const;
+	std::string getDesc() const;
+	bool operator==(const CHashKey&) const;
 private:
 	CHashKey() {}
 

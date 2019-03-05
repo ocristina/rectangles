@@ -9,8 +9,9 @@ public:
 	CRectangleMap();
 	~CRectangleMap();
 
-	bool Exists(set<int>);
-	void AddNewResultRectangle(set<int>& rset_orig, CRectangle& rc_rect);
+	bool Exists(CHashKey&);
+
+	void AddNewResultRectangle(CHashKey& rset_orig, CRectangle& rc_rect);
 	CRectangleMap GenerateIntersectionSet();
 	int  Count();
 	void PrintContents();
@@ -18,8 +19,8 @@ public:
 private:
 	MAP_RECTANGLES m_mapStorage;
 
-	set<int> merge(set<int> set_tgt,const set<int> & rset_src);
-	string getIntersectionOperands(const set<int>&);
+
+	string getIntersectionOperands(const CHashKey&);
 	void filterOutEmptyRects();
 };
 

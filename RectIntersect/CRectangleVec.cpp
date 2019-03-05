@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "CRectangleVec.h"
-
+#include "CHashKey.h"
 
 
 CRectangleVec::CRectangleVec()
@@ -26,20 +26,19 @@ CRectangleMap CRectangleVec::GenerateIntersectionSet()
 
 	int nIndex1, nIndex2;
 
+	if (Count() < 2)  // not enough rects
+		return cmapRetVal;
 
 	nIndex1 = 1;  // One-based
 
 	for (it1 = m_vecRects.begin(); it1 != m_vecRects.end() - 1; it1++,nIndex1++)
 		for (nIndex2 = nIndex1 + 1,it2 = it1 + 1; it2 != m_vecRects.end(); it2++, nIndex2++)
 		{
-			set<int> set_key;
-		
 			cResultRect = it1->intersect(*it2);
 			if (cResultRect.isEmpty())
 				continue;
-			set_key.insert(nIndex1);
-			set_key.insert(nIndex2);
-			cmapRetVal.AddNewResultRectangle(set_key, cResultRect);
+			CHashKey k(nIndex1, nIndex2);
+			cmapRetVal.AddNewResultRectangle(k, cResultRect);
 		}
 	return cmapRetVal;
 }
