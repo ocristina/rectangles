@@ -19,11 +19,30 @@ CRectanglesFactory::~CRectanglesFactory()
 CRectangleVec CRectanglesFactory::CreateRectangles(const char *pszFileName)
 {
 	CRectangleVec cvecReturnVal;
-	ifstream inputStream(pszFileName); 
+	ifstream inputStream; 
 	json j,arrayOfRects, rect;
 	
-	inputStream >> j;
-
+	try
+	{
+		inputStream.open(pszFileName);
+	}
+	catch (...)
+	{
+		throw std::runtime_error("could not open the file for reading");
+	}
+	if (inputStream.fail())
+	{
+		throw std::runtime_error("could not open the file for reading");
+	}
+	
+	try
+	{
+		inputStream >> j;
+	}
+	catch (json::parse_error xception)
+	{
+		throw runtime_error(string("parse error, failed to parse the input .json file, error : ") + xception.what()); //sprintf_s(buffer, "failed to parse the input .json file, error : %s", xception.what());
+	}
 	arrayOfRects = j["rects"];
 	for (json::iterator it = arrayOfRects.begin(); it != arrayOfRects.end(); it++)
 	{
