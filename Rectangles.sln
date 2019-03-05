@@ -9,6 +9,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTests", "UnitTests\Unit
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RectIntersect", "RectIntersect\RectIntersect.vcxproj", "{9277BD63-0D77-4C35-8E4E-E75B56EA2A9D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3B9AAEC9-4579-4DBB-B712-C783F907A8ED}"
+	ProjectSection(SolutionItems) = preProject
+		C++ Proficiency test for Senior Candidates - Nov 2018.pdf = C++ Proficiency test for Senior Candidates - Nov 2018.pdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
