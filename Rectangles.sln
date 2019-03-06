@@ -12,6 +12,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3B9AAEC9-4579-4DBB-B712-C783F907A8ED}"
 	ProjectSection(SolutionItems) = preProject
 		C++ Proficiency test for Senior Candidates - Nov 2018.pdf = C++ Proficiency test for Senior Candidates - Nov 2018.pdf
+		examples\rectangles1.json = examples\rectangles1.json
+		examples\rectangles32.json = examples\rectangles32.json
+		examples\rectangles4.json = examples\rectangles4.json
 	EndProjectSection
 EndProject
 Global
