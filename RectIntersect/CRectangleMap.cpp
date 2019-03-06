@@ -67,10 +67,9 @@ CRectangleMap CRectangleMap::GenerateIntersectionSet()
 void CRectangleMap::PrintContents()
 {
 	MAP_IT_RECTANGLES it;
-	int nCount = 0;
 
 	for (it = m_mapStorage.begin(); it != m_mapStorage.end(); ++it)
-		cout << "\t" << ++nCount << " : " << "Between Rectangle " << it->first.getDesc().c_str() << " " << (it->second).GetDescription().c_str() << endl;
+		cout << "\t" <<  "Between Rectangle " << it->first.getDesc().c_str() << " " << (it->second).GetDescription().c_str() << endl;
 }
 
 void CRectangleMap::filterOutEmptyRects()

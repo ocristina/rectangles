@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "CHashKey.h"
-#include <math.h>
 
 #include <vector>
 
@@ -48,8 +47,6 @@ CHashKey CHashKey::merge(const CHashKey& rc_second) const
 		nMax = rc_second.m_nLen;
 		pnBiggerArray = rc_second.m_pnStorage;
 	}
-
-	
 	cReturnVal.m_nLen = nMax;
 	cReturnVal.m_pnStorage = new unsigned int[nMax];
 	for (nIndex = 0; nIndex < nMin; nIndex++)
